@@ -1,5 +1,5 @@
 <h1 align="center">
-  Yuexuan Li | 李悦轩
+  Yuexuan Li | 李悦萱
 </h1>
 
 <h3 align="center">
