@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import neuro from "../../Assets/Projects/neuro.png";
+import EEG from "../../Assets/Projects/EEG.png";
+import tkProject from "../../Assets/Projects/TK_PROJECT.png";
+import dissertationPDF from "../../Assets/Dissertation_2418663_CNCR.pdf";
+import EEG_PTOJECT_PDF from "../../Assets/情绪调节头盔：基于脑机接口和机器学习（ML）的可交互式音乐疗法实现设备.pdf";
+
 
 function Projects() {
   return (
@@ -18,73 +18,56 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are my professional work experience and research projects.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col xs={12} sm={12} md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              imgPath={tkProject}
+              title="Taikang Email Task Sorting Platform"
+              role="Test Engineer | Jun 2024 – Present"
+              highlights={[
+                "Designed 17+ end-to-end automated tests",
+                "Data-driven testing with CSV & Python",
+                "Performance optimization via JMeter",
+                "Stress testing & benchmarking"
+              ]}
+              techStack={["Python", "JMeter", "SQL"]}
+              pdfButtonText="View Work Details"
+              ghLink="https://github.com/LorenaYuethuen"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col xs={12} sm={12} md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              imgPath={neuro}
+              title="Brain Attention Control Mechanisms"
+              role="Project Lead | Nov 2022 – Aug 2023"
+              highlights={[
+                "Modeled attention control with ADDM",
+                "Analyzed cognitive parameters (IOR, NDT, selection rate)",
+                "Revealed links between attention strategies and traits"
+              ]}
+              techStack={["MATLAB", "Bayesian DE-MCMC", "Cognitive Modeling"]}
+              pdfLink={dissertationPDF}
+              pdfButtonText="View Research Paper"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col xs={12} sm={12} md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              imgPath={EEG}
+              title="Interactive Music Therapy Device"
+              role="Project Member | Sep 2020 – Sep 2021"
+              highlights={[
+                "Collected and analyzed EEG signals under varied music",
+                "Developed closed-loop adaptive system for emotion",
+                "Integrated Raspberry Pi for real-time neurofeedback",
+                "Validated relaxation effects & proposed framework"
+              ]}
+              techStack={["OpenBCI", "Python", "Raspberry Pi", "BCI + ML"]}
+              pdfLink={EEG_PTOJECT_PDF}
+              pdfButtonText="View Research Paper"
             />
           </Col>
         </Row>

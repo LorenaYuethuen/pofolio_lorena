@@ -1,76 +1,187 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
+<h1 align="center">
+  Yuexuan Li | 李悦轩
+</h1>
+
+<h3 align="center">
+  Personal Portfolio Website
+</h3>
+
+<p align="center">
+  Test Engineer | Computational Neuroscience Researcher | BCI & ML Enthusiast
+</p>
+
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Portfolio Demo" src="./Images/readme-img1.png" />
 </div>
 
 <br/>
 
-<center>
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
-
-</center>
+<p align="center">
+  <a href="https://github.com/LorenaYuethuen/Portfolio">
+    <img src="https://img.shields.io/badge/React-17.0.2-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
+  </a>
+  <a href="https://github.com/LorenaYuethuen/Portfolio">
+    <img src="https://img.shields.io/badge/Bootstrap-5.1.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+  </a>
+  <a href="https://github.com/LorenaYuethuen/Portfolio">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License"/>
+  </a>
+</p>
 
 <h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
+  <a href="#about">About</a> •
+  <a href="#features">Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#contact">Contact</a>
 </h3>
 
-## TL;DR
+## 📖 About
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+Welcome to my personal portfolio! I'm **Yuexuan Li**, a Test Engineer with a strong background in Computational Neuroscience and Cognitive Robotics. This portfolio showcases my professional journey, research projects, and technical expertise.
 
-## Built With
+### 🎓 Education
+- **MSc in Computational Neuroscience and Cognitive Robotics** - University of Birmingham (2022-2023)
+- **BSc in Computer Science and Technology** - Xi'an University of Architecture and Technology (2018-2022)
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+### 💼 Professional Focus
+- **Software Testing & QA**: Full-chain automated testing, performance optimization, data-driven testing
+- **Computational Neuroscience**: Brain attention mechanisms, cognitive modeling, EEG analysis
+- **Brain-Computer Interfaces**: BCI systems, emotion regulation, physiological signal processing
+- **Machine Learning**: Feature extraction, predictive modeling, data analysis
 
-This project was built using these technologies.
+## ✨ Features
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+### Portfolio Sections
+- **🏠 Home**: Dynamic typing animation showcasing my roles and expertise
+- **👤 About**: Educational background, technical skills, and GitHub activity
+- **💼 Projects**: Featured work experience and research projects with PDF previews
+- **📄 Resume**: Downloadable CV with direct preview
+- **📱 Contact**: Social media links and WeChat QR code modal
 
-## Features
+### Special Features
+- **📄 PDF Preview**: Click to view research papers and project documentation
+- **💬 WeChat QR Code Modal**: Interactive popup for WeChat contact
+- **📧 Direct Email Links**: Quick access to email communication
+- **🌙 Dark Theme**: Modern dark-themed UI design
+- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **⚡ Fast Loading**: Optimized performance and smooth animations
 
-**📖 Multi-Page Layout**
+## 🛠 Tech Stack
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+### Frontend
+- **React.js** (v17.0.2) - UI framework
+- **React Bootstrap** - Responsive components
+- **React Router** - Navigation
+- **React Icons** - Icon library
+- **Typewriter Effect** - Dynamic text animations
 
-**📱 Fully Responsive**
+### Testing & Tools
+- **Python** - Automation scripts
+- **MATLAB** - Data analysis and modeling
+- **JMeter** - Performance testing
+- **Git** - Version control
 
-## Getting Started
+### Deployment
+- **Node.js** - Runtime environment
+- **npm** - Package management
+- Ready for **Vercel**, **Netlify**, or **GitHub Pages** deployment
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+## 🚀 Installation
 
-## 🛠 Installation and Setup Instructions
+### Prerequisites
+- **Node.js** (v14 or higher)
+- **npm** or **yarn**
+- **Git**
 
-1. Installation: `npm install`
+### Setup Instructions
 
-2. In the project directory, you can run: `npm start`
+1. **Clone the repository**
+```bash
+git clone https://github.com/LorenaYuethuen/Portfolio.git
+cd Portfolio
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-## Usage Instructions
+3. **Start development server**
+```bash
+npm start
+```
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+4. **Open in browser**
+```
+http://localhost:3000
+```
 
-### Show your support
+### Build for Production
 
-Give a ⭐ if you like this website!
+```bash
+npm run build
+```
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+The optimized production build will be in the `build/` folder.
+
+## 📂 Project Structure
+
+```
+Portfolio/
+├── public/              # Static files
+├── src/
+│   ├── Assets/         # Images, PDFs, icons
+│   │   ├── Projects/   # Project images
+│   │   └── TechIcons/  # Technology icons
+│   ├── components/     # React components
+│   │   ├── Home/       # Home page components
+│   │   ├── About/      # About section
+│   │   ├── Projects/   # Projects showcase
+│   │   ├── Resume/     # Resume section
+│   │   ├── Footer.js   # Footer component
+│   │   ├── Navbar.js   # Navigation bar
+│   │   └── WechatModal.js  # WeChat QR modal
+│   ├── App.js          # Main app component
+│   └── style.css       # Global styles
+├── package.json
+└── README.md
+```
+
+## 🎨 Customization
+
+To customize this portfolio for your own use:
+
+1. **Update Personal Info**: Edit `src/components/Home/Home.js` and `src/components/About/AboutCard.js`
+2. **Add Projects**: Modify `src/components/Projects/Projects.js`
+3. **Update Skills**: Edit `src/components/About/Techstack.js`
+4. **Change Resume**: Replace PDF in `src/Assets/`
+5. **Update Contact**: Modify social links in `src/components/Footer.js` and `src/components/Home/Home.js`
+
+## 📧 Contact
+
+- **Email**: [LorenaYxl@outlook.com](mailto:LorenaYxl@outlook.com)
+- **LinkedIn**: [linkedin.com/in/yuexuan-li-ab84b1283](https://www.linkedin.com/in/yuexuan-li-ab84b1283)
+- **GitHub**: [@LorenaYuethuen](https://github.com/LorenaYuethuen)
+- **Instagram**: [@lorena_yuethuen](https://www.instagram.com/lorena_yuethuen/)
+- **WeChat**: lyx319932362584
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Original template inspired by open-source portfolio projects
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- UI components from [React Bootstrap](https://react-bootstrap.github.io/)
+
+---
+
+<p align="center">
+  Made with ❤️ by Yuexuan Li
+</p>
+
+<p align="center">
+  <a href="#top">⬆️ Back to Top</a>
+</p>

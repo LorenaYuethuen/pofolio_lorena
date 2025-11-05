@@ -7,38 +7,49 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi everyone! I’m <span className="purple">Soumyajit Behera</span>{" "}
-            from <span className="purple">Bhubaneswar, India</span>.
-            <br />
-            I’m currently working as a{" "}
-            <span className="purple">Software Developer</span> at{" "}
-            <span className="purple">Juspay</span>.
-            <br />I hold an Integrated M.Sc. (IMSc) in{" "}
-            <span className="purple">Mathematics and Computing</span> from{" "}
-            <span className="purple">BIT Mesra</span>.
-            <br />
-            <br />
-            Outside of coding, I love engaging in activities that keep me
-            creative and inspired:
+          <p style={{ textAlign: "justify", lineHeight: "1.8" }}>
+            Hi everyone! I'm <span className="purple">Yuexuan Li</span>, 
+            a <span className="purple">Test Engineer</span> at{" "}
+            <span className="purple">Beijing Longway Computer Application Technology Development Co., Ltd.</span>
+          </p>
+
+          <p style={{ textAlign: "justify", lineHeight: "1.8", paddingTop: "15px" }}>
+            I specialize in{" "}
+            <span className="purple">data-driven testing</span>,{" "}
+            <span className="purple">automation</span>, and{" "}
+            <span className="purple">performance optimization</span>. 
+            My approach combines technical expertise with user-centric thinking to enhance 
+            product quality and user experience.
+          </p>
+
+          <p style={{ textAlign: "justify", lineHeight: "1.8", paddingTop: "15px" }}>
+            I hold an MSc in{" "}
+            <span className="purple">Computational Neuroscience and Cognitive Robotics</span> from{" "}
+            <span className="purple">University of Birmingham</span>, 
+            where I researched attention mechanisms and user behavior—insights I now apply 
+            to testing and product development.
+          </p>
+
+          <p style={{ textAlign: "justify", lineHeight: "1.8", paddingTop: "20px" }}>
+            Beyond work, I enjoy:
           </p>
 
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games 🎮
+              <ImPointRight /> Reading
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs ✍️
+              <ImPointRight /> Rock Climbing
             </li>
             <li className="about-activity">
-              <ImPointRight /> Traveling and Exploring New Places 🌍
+              <ImPointRight /> Photography
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Driving quality through innovation and attention to detail!"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Yuexuan Li</footer>
         </blockquote>
       </Card.Body>
     </Card>

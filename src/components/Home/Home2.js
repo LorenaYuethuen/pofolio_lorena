@@ -13,37 +13,36 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I'm a Test Engineer with a strong background in Computational Neuroscience
+              and Cognitive Robotics. I'm passionate about ensuring software quality
+              through comprehensive testing strategies and data-driven analysis.
               <br />
               <br />
-              I’m proficient in
+              I'm proficient in
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  Python, MATLAB, Java, and SQL{" "}
                 </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
+              — with expertise in automated testing, performance optimization, and data analysis.
               <br />
               <br />
-              My key areas of interest include developing
+              My areas of expertise include
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  Automated Testing, Brain-Computer Interfaces, Machine Learning,{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              and cognitive neuroscience research.
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              I specialize in designing
+              <b className="purple"> end-to-end test automation frameworks</b>, implementing{" "}
               <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="purple">data-driven testing strategies</b>, and conducting{" "}
+                <b className="purple">performance analysis</b> for complex systems.
               </i>
             </p>
           </Col>

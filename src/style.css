@@ -556,44 +556,55 @@ button:focus {
 }
 
 .tech-icons {
-  display: flex !important;
-  align-self: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
   justify-content: center !important;
-  font-size: 1rem !important;
-  margin: 15px !important;
-  padding: 10px 20px !important;
-  opacity: 0.93 !important;
-  outline: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-  border-radius: 24px !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
-  overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
-  width: fit-content !important;
+  font-size: 1.1rem !important;
+  margin: 10px 8px !important;
+  padding: 12px 24px !important;
+  background: rgba(31, 30, 47, 0.6) !important;
+  border: 1.5px solid rgba(108, 99, 255, 0.4) !important;
+  border-radius: 50px !important;
+  flex-direction: row !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
   cursor: pointer !important;
-  transition: outline-color 0.3s, outline-width 0.3s, transform 0.3s;
   color: white;
+  width: auto !important;
 }
 
 .tech-icons-text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 12px;
   color: white;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 8px 5px !important;
+    padding: 10px 18px !important;
+    font-size: 0.95rem !important;
   }
 }
 
 .tech-icons:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-  outline: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  transform: translateY(-3px) !important;
+  border-color: rgba(108, 99, 255, 0.8) !important;
+  box-shadow: 0 6px 25px rgba(108, 99, 255, 0.3) !important;
+  background: rgba(41, 40, 67, 0.8) !important;
 }
+
+/* Unified icon size for all tech icons */
+.tech-icons img {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+}
+
 .tech-icon-images {
   height: 1.6rem;
   line-height: 1.6 !important;
