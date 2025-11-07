@@ -1,11 +1,12 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
-
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+/* 引入字体：衬线字体用于标题，优雅的无衬线字体用于正文 */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 body {
   margin: 0;
-  font-family: "PT Mono", monospace !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  /* 深邃的背景渐变：墨黑到深蓝，营造氛围感 */
+  background-image: linear-gradient(135deg, #0a0e14 0%, #1a1f2e 50%, #0f1419 100%);
+  background-attachment: fixed;
 }

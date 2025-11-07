@@ -1,0 +1,378 @@
+// ==========================================
+// CUSTOM SCSS - Bootstrap Variable Overrides
+// Deep, Atmospheric, Jazz Bar meets AI Dashboard
+// ==========================================
+
+// ------------------------------------------
+// Color Palette
+// ------------------------------------------
+$ink-black: #0D0D0D;
+$deep-gray: #1C1C1C;
+$mist-blue: #2E3A46;
+$desaturated-gold: #BFA36F;
+$silver: #C0C0C0;
+$bronze: #8C7853;
+$highlight-glow: #00C7FF;
+
+// ------------------------------------------
+// Bootstrap Variable Overrides
+// ------------------------------------------
+$body-bg: $ink-black;
+$body-color: rgba(255, 255, 255, 0.85);
+$primary: $mist-blue;
+$secondary: $desaturated-gold;
+$border-color: rgba(255, 255, 255, 0.1);
+
+// Typography
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headings-font-family: 'Lora', 'Georgia', 'Cormorant Garamond', serif;
+$headings-font-weight: 600;
+$headings-line-height: 1.3;
+
+// Spacing
+$spacer: 1rem;
+$grid-gutter-width: 2rem;
+
+// Borders
+$border-radius: 8px;
+$border-radius-lg: 12px;
+$border-radius-sm: 6px;
+
+// Shadows
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+$box-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+$box-shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.8);
+
+// Transitions
+$transition-base: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fade: opacity 0.8s ease-in-out;
+$transition-collapse: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+// ------------------------------------------
+// Custom Variables
+// ------------------------------------------
+$neon-cyan: #00C7FF;
+$neon-cyan-glow: rgba(0, 199, 255, 0.3);
+$gradient-dark: linear-gradient(180deg, #0D0D0D 0%, #2E3A46 100%);
+$gradient-surface: linear-gradient(135deg, rgba(28, 28, 28, 0.85) 0%, rgba(46, 58, 70, 0.7) 100%);
+
+// ------------------------------------------
+// Global Styles
+// ------------------------------------------
+* {
+  transition: $transition-base;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $gradient-dark;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+  
+  // Film grain overlay
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 4px);
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+// ------------------------------------------
+// Utility Classes for Animations
+// ------------------------------------------
+
+// Fade slide up animation
+.fade-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fade slide in from left
+.fade-slide-left {
+  animation: slideFadeLeft 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Fade slide in from right
+.fade-slide-right {
+  animation: slideFadeRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Ambient reveal (blur + fade)
+.ambient-reveal {
+  animation: ambientReveal 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes ambientReveal {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+// Stagger delay utilities
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+// ------------------------------------------
+// Glassmorphism Utilities
+// ------------------------------------------
+.glass-surface {
+  background: rgba(28, 28, 28, 0.7) !important;
+  backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow;
+}
+
+.glass-surface-light {
+  background: rgba(46, 58, 70, 0.5) !important;
+  backdrop-filter: blur(10px) saturate(110%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius;
+}
+
+// ------------------------------------------
+// Glow Effects
+// ------------------------------------------
+.glow-cyan {
+  box-shadow: 0 0 20px $neon-cyan-glow,
+              0 0 40px rgba(0, 199, 255, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(191, 163, 111, 0.3),
+              0 0 40px rgba(191, 163, 111, 0.15);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px $neon-cyan-glow,
+               0 0 20px rgba(0, 199, 255, 0.2);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(191, 163, 111, 0.4),
+               0 0 20px rgba(191, 163, 111, 0.2);
+}
+
+// ------------------------------------------
+// Hero Section Styles
+// ------------------------------------------
+.hero {
+  background: $gradient-dark;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  // Ambient background particles
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(0, 199, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(191, 163, 111, 0.05) 0%, transparent 50%);
+    opacity: 0.5;
+    animation: ambientPulse 8s ease-in-out infinite;
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+// ------------------------------------------
+// Card Hover Effects (Tech Dashboard Style)
+// ------------------------------------------
+.card-hover-glow {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8),
+                0 0 30px $neon-cyan-glow,
+                0 0 60px rgba(191, 163, 111, 0.1);
+    border-color: rgba(0, 199, 255, 0.3);
+  }
+}
+
+// ------------------------------------------
+// Responsive Typography
+// ------------------------------------------
+h1, .h1 {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+h2, .h2 {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+h3, .h3, h4, .h4 {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+p {
+  font-family: $font-family-base;
+  line-height: 1.7;
+  color: $body-color;
+}
+
+// ------------------------------------------
+// Accent Text Colors
+// ------------------------------------------
+.text-accent-gold {
+  color: $desaturated-gold !important;
+}
+
+.text-accent-cyan {
+  color: $highlight-glow !important;
+}
+
+.text-silver {
+  color: $silver !important;
+}
+
+// ------------------------------------------
+// Section Spacing & Layout
+// ------------------------------------------
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-dark {
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.95) 0%, rgba(28, 28, 28, 0.9) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+// ------------------------------------------
+// Custom Scrollbar (matches main theme)
+// ------------------------------------------
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $deep-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $mist-blue;
+  border-radius: 6px;
+  transition: background 0.6s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $bronze;
+}
+
+// ------------------------------------------
+// Focus States (Accessibility)
+// ------------------------------------------
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid rgba(0, 199, 255, 0.4);
+  outline-offset: 2px;
+}
+
+// ------------------------------------------
+// Loading/Shimmer Effect
+// ------------------------------------------
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+

@@ -15,10 +15,11 @@ function ProjectCards(props) {
         
         {props.role && (
           <p style={{ 
-            color: "#c770f0", 
+            color: "#00C7FF", 
             fontSize: "0.8em", 
             marginBottom: "15px",
-            fontWeight: "500"
+            fontWeight: "500",
+            textShadow: "0 0 8px rgba(0, 199, 255, 0.6), 0 0 15px rgba(0, 199, 255, 0.4)"
           }}>
             {props.role}
           </p>
@@ -42,9 +43,10 @@ function ProjectCards(props) {
                 <span style={{ 
                   position: "absolute", 
                   left: "0", 
-                  color: "#c770f0",
+                  color: "#00C7FF",
                   fontWeight: "bold",
-                  fontSize: "1.1em"
+                  fontSize: "1.1em",
+                  textShadow: "0 0 8px rgba(0, 199, 255, 0.6)"
                 }}>▸</span>
                 {item}
               </li>
@@ -58,15 +60,16 @@ function ProjectCards(props) {
             {props.techStack.map((tech, index) => (
               <span key={index} style={{
                 display: "inline-block",
-                backgroundColor: "rgba(108, 99, 255, 0.15)",
-                color: "#c770f0",
+                backgroundColor: "rgba(0, 199, 255, 0.15)",
+                color: "#00C7FF",
                 padding: "5px 12px",
                 borderRadius: "14px",
                 fontSize: "0.85em",
                 marginRight: "8px",
                 marginBottom: "8px",
-                border: "1px solid rgba(108, 99, 255, 0.3)",
-                fontWeight: "500"
+                border: "1px solid rgba(0, 199, 255, 0.3)",
+                fontWeight: "500",
+                textShadow: "0 0 6px rgba(0, 199, 255, 0.5)"
               }}>
                 {tech}
               </span>

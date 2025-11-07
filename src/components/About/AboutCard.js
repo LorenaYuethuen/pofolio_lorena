@@ -46,10 +46,20 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          <p style={{ 
+            background: "linear-gradient(135deg, #BFA36F 0%, #8C7853 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            fontWeight: "500",
+            fontSize: "1.1em"
+          }}>
             "Driving quality through innovation and attention to detail!"{" "}
           </p>
-          <footer className="blockquote-footer">Yuexuan Li</footer>
+          <footer className="blockquote-footer" style={{
+            color: "#BFA36F",
+            fontWeight: "500"
+          }}>Yuexuan Li</footer>
         </blockquote>
       </Card.Body>
     </Card>

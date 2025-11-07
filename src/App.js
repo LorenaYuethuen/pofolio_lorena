@@ -13,9 +13,13 @@ import {
   Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+// Import Bootstrap first
+import "bootstrap/dist/css/bootstrap.min.css";
+// Import custom SCSS to override Bootstrap variables
+import "./styles/custom.scss";
+// Import additional styles
 import "./style.css";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
