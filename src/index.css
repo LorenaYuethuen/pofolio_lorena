@@ -6,7 +6,8 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* 深邃的背景渐变：墨黑到深蓝，营造氛围感 */
-  background-image: linear-gradient(135deg, #0a0e14 0%, #1a1f2e 50%, #0f1419 100%);
+  /* 使用 Design Global Styles 颜色变量 */
+  background-color: var(--bg-primary, #0C0C0E);
+  background-image: linear-gradient(135deg, var(--bg-primary, #0C0C0E) 0%, var(--bg-secondary, #121214) 50%, var(--bg-primary, #0C0C0E) 100%);
   background-attachment: fixed;
 }

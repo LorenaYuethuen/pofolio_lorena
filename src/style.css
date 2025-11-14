@@ -1,5 +1,17 @@
-html {
-  /* 深邃内敛的背景渐变 */
+:root {
+  --font-size: 16px;
+  
+  /* Design Global Styles - Portfolio Design System Colors */
+  --bg-primary: #0C0C0E;
+  --bg-secondary: #121214;
+  --card-dark: #16171A;
+  --border-light: #FFFFFF14;
+  --text-primary: #FFFFFFE6;
+  --text-secondary: #FFFFFF99;
+  --neon-blue: #00C7FF;
+  --accent-gold: #BFA36F;
+  
+  /* Legacy color variables - kept for backward compatibility */
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(10, 14, 20, 0.85),
@@ -18,29 +30,122 @@ html {
   --primary-light: #7a9abf;
   
   /* 辅色：低饱和度的金/铜色 */
-  --accent-gold: #b8956a;
   --accent-bronze: #8b6f47;
   --accent-silver: #9ca3af;
   
-  /* 背景色系 */
-  --bg-dark: #0a0e14;
-  --bg-medium: #1a1f2e;
-  --bg-light: #2a2f3e;
+  /* 背景色系 - mapped to new system */
+  --bg-dark: var(--bg-primary);
+  --bg-medium: var(--bg-secondary);
+  --bg-light: var(--card-dark);
   
-  /* 文字颜色 */
-  --text-primary: #e8e9ed;
-  --text-secondary: #b4bac1;
+  /* 文字颜色 - mapped to new system */
   --text-accent: var(--accent-gold);
   
   /* 保留旧变量名以兼容 */
   --imp-text-color: var(--accent-gold);
   
-  /* 霓虹青高光色 */
-  --neon-cyan: #00C7FF;
+  /* 霓虹青高光色 - mapped to new system */
+  --neon-cyan: var(--neon-blue);
+  
+  /* Tailwind compatibility variables */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: var(--card-dark);
+  --card-foreground: var(--text-primary);
+  --popover: var(--card-dark);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--neon-blue);
+  --primary-foreground: #000000;
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--bg-secondary);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--accent-gold);
+  --accent-foreground: #000000;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: var(--border-light);
+  --input: transparent;
+  --input-background: var(--card-dark);
+  --switch-background: #cbced4;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: var(--neon-blue);
+  --chart-1: var(--neon-blue);
+  --chart-2: var(--accent-gold);
+  --chart-3: #00FF88;
+  --chart-4: #FF006E;
+  --chart-5: #8B5CF6;
+  --radius: 0.75rem;
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Design Global Styles - Typography */
+:where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+  h1 {
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+/* Body typography */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .purple {
-  color: var(--neon-cyan) !important;
+  color: var(--neon-blue) !important;
   text-shadow: 0 0 8px rgba(0, 199, 255, 0.6),
                0 0 15px rgba(0, 199, 255, 0.4);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -50,6 +155,40 @@ html {
   text-shadow: 0 0 12px rgba(0, 199, 255, 0.8),
                0 0 20px rgba(0, 199, 255, 0.5),
                0 0 30px rgba(0, 199, 255, 0.3);
+}
+
+/* Design Global Styles - Utility Classes */
+
+/* Custom Glow Effects */
+.glow-neon-blue {
+  box-shadow: 0 0 32px rgba(0, 199, 255, 0.2);
+}
+
+.glow-neon-blue-strong {
+  box-shadow: 0 0 48px rgba(0, 199, 255, 0.4);
+}
+
+.card-shadow {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.56), 0 -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Noise overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+/* Gradient backgrounds */
+.gradient-radial {
+  background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 button:focus {
@@ -66,7 +205,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-primary);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -98,19 +237,21 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg-medium);
+  background: var(--bg-secondary);
 }
 
-/* Handle - 使用雾蓝色 */
+/* Handle - 使用霓虹蓝色 */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-dark);
+  background: var(--neon-blue);
   border-radius: 12px;
   transition: background 0.6s ease;
+  opacity: 0.5;
 }
 
 /* Handle on hover - 金色点缀 */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-bronze);
+  background: var(--accent-gold);
+  opacity: 0.8;
   border-radius: 12px;
 }
 
@@ -118,11 +259,11 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: rgba(10, 14, 20, 0.75) !important;
+  background-color: rgba(12, 12, 14, 0.75) !important;
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
   box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.4) !important;
   backdrop-filter: blur(20px) saturate(120%) !important;
-  border-bottom: 1px solid rgba(90, 122, 160, 0.1) !important;
+  border-bottom: 1px solid var(--border-light) !important;
 }
 
 .navbar {
@@ -190,7 +331,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: var(--bg-dark) !important;
+    background-color: var(--bg-primary) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -307,7 +448,7 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
+  /* background-image: var(--image-gradient), url(./Assets/home-bg2.jpg); */
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -473,8 +614,8 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: var(--bg-dark);
-  border-top: 1px solid rgba(90, 122, 160, 0.15);
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-light);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important;
